@@ -11,6 +11,9 @@ if (isset($_POST["title"])) {
       . " '" . $_POST["body"] . "')"
   );
 
+//$sta potentiellement dangereux car les $_POST n'ont pas était vérifier.
+//C'est dangereux en cas d'injection SQL. 
+
   $id = $pdo->lastInsertId();
   redirect("?page=show&id=$id");
 }

@@ -13,6 +13,11 @@ if (isset($_GET["username"])) {
     redirect($_SERVER['HTTP_REFERER']);
   }
 }
+// ligne 7 "select *" =mauvaise pratique.
+// $username et $ password, directement mis dans la requête.
+// Pose problème car pas de validation ni d'aissinisement.
+// Risque d'injection SQL.
+// Il faut donc utiliser des requêtes préparées.
 
 include "headers.php";
 ?><form method="get" action="">

@@ -15,6 +15,5 @@ foreach ($posts as $post) {
 
 include "footers.php";
 
-// Ici la ligne 7 va nous poser problème. 
-// Effectivement on utilise directement un query. 
-// De plus 
+// ligne 7 ne pas utiliser de "select *".
+// choisir les champs voulues.
